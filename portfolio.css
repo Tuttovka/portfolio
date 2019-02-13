@@ -12,26 +12,26 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
-    letter-spacing: 1.6px;
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
     line-height: 1.25;
 }
 
 h3 {
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 0.45;
 
 }
 
 p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 0.62;
     color: hsla(0, 0%, 16%, 0.66);
 }
 
 .contacts,
 .label {
-    font-size: 18px;
+    font-size: 1.375rem;
 }
 
 .description {
