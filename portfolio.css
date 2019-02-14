@@ -2,6 +2,7 @@ body {
     font-family: "Exo", sans-serif;
     color: hsl(0, 0%, 16%);
     background-color: #fff;
+    margin: 0;
 }
 
 h1 {
@@ -36,3 +37,9 @@ p {
 .description {
     text-transform: uppercase;
 }
+
+.wrapper {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    }
