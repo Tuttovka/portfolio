@@ -7,7 +7,7 @@
 body {
     font-family: "Exo", sans-serif;
     color: hsl(0, 0%, 16%);
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%);
     margin: 0; /* Stranka ma automaticky okraj, ktereho je nutne ji zbavit */
 }
 
@@ -25,6 +25,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
+    font-weight: normal; /* odebrani boldu nadpisu */
     letter-spacing: 0.1em;
     line-height: 1.25;
 }
@@ -38,6 +39,7 @@ p {
     font-size: 1rem;
     line-height: 1.625;
     color: hsla(0, 0%, 16%, 0.66);
+    margin-bottom: 2rem; /* odrazeni mezi odstavcu v textu */
 }
 
 .contacts,
@@ -46,7 +48,7 @@ p {
 }
 
 .description {
-    text-transform: uppercase;
+    text-transform: uppercase; /* text ve verzalkach */
 }
 
 .wrapper {
@@ -56,29 +58,51 @@ p {
 }
 
 .intro {
-    background-color: #94664b;
+    background-color: hsl(22, 33%, 44%);
     min-height: 80vh; /* Nastaveni minimalni vysky na 80 viewport-height => 80% zobrazujiciho okna */
     column-span: all; /* vytvori block formatting context tzn. vypne margin collapsing */
     position: relative; /* Prvek je vytazen z toku dokumentu, lze jej posunout, zaklada novy blok */
     background-image: url(images/goat-canyon-trestle-bridge.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center; /* vystredení obrazku */
+    background-repeat: no-repeat; /* zruseni opakovani obrazku, ktere je standart */
+    background-size: cover; /* zmena velikosti, aby pokryval cely prvek => dochazi k deformaci */
 }
 
 .intro-text {
-    color: white;
+    color: hsl(0, 0%, 100%);
     width: 100%; /* Nastaveni sirky na cely radek, nebot absolute jej vyjme z dokumentu */
-    padding: 0 10%; /* Posunutí od kraje o 10% vzdalenosti*/
+    padding: 0 10%; /* Posunuti od kraje o 10% vzdalenosti*/
     position: absolute; /* Vyjme prvek z dokumentu, takze neovlivnuje zbytek dokumentu a lze jej umistit souradnicemi od zacatku omezujiciho bloku */
     top: 50%; /* Nastaveni vysky umisteni horního okraje elementu. */
     transform: translateY(-50%); /* Pohne elementem ze soucasne pozice vertikalne o - 50% jeho vysky. */
-    text-align: center;
+    text-align: center; /* Vycentrovani textu na stred */
 }
 
 .intro-text p {
     display: inline-block;
-    color: white;
+    color: hsl(0, 0%, 100%);
     background-color: hsla(0, 0%, 0%, 0.6);
     padding: 0 0.3em;
+}
+
+.about-me {
+    position: relative; /* vytvoření nového souřadného systému pro pozicovani potomku */
+    background-color: hsl(0, 13%, 84%);
+}
+
+.about-me::after { 
+    content: ""; /* pouziti pseudoelementu (je soucasti rodice) - je nutne dat content, byt prazdny, posleze bude vlozen gradient */
+    display: block; /* zobrazení v blocku */
+    width: 40%; /* sirka 40 %, nebot sirka leve bile casti je 60 %. */
+    padding-bottom: 40%; /* padding je soucasti vysky elementu 40 % je stejnych jako 40 % sirky, aby se jednalo o ctverec - pred paddingem ma nulovou vysku */
+    background-image: linear-gradient(135deg, transparent 50%, hsl(0, 100%, 71%) 50%); /* vytvoreni gradientu, kdyz je prechod stejny, jedna se o velmi ostry prechod napr na strance https://cssgradient.io/ */
+    position: absolute; /* je nutne jej absolutne napozicovat a orientovat podle rodice */
+    bottom: 0; 
+    right: 0; /* umisteni dolu a doprava */
+}
+
+.about-me-text {
+    background-color: hsl(0, 0%, 100%);
+    width: 60%; 
+    padding: 10rem 10%; /* padding horni + dolni - levy + pravy */   
 }
