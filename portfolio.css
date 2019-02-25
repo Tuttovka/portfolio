@@ -84,6 +84,7 @@ p {
     background-repeat: no-repeat; /* zruseni opakovani obrazku, ktere je standart */
     background-size: cover; /* zmena velikosti, aby pokryval cely prvek => dochazi k deformaci */
 }
+
 .intro-text {
     color: hsl(0, 0%, 100%);
     width: 100%; /* Nastaveni sirky na cely radek, nebot absolute jej vyjme z dokumentu */
@@ -171,15 +172,18 @@ p {
 @media (min-width: 600px) {
     .skills-heading {
         text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 }
 
 @media (min-width: 900px) {
     .skills-heading {
-        margin-top: 10rem;
+        margin-top: 5.5rem;
         margin-bottom: 5.5rem;
     }
 }
+
 .skill-box {
     margin-bottom: 1em;
 }
@@ -191,6 +195,7 @@ p {
         float: left; /* float zpusobi vytrzeni objektu z toku dokumentu a text kolem nich zacne obtekat. */
         padding-left: 1rem;
         padding-right: 1rem;
+        text-align: center;
     }
 }
 
@@ -215,12 +220,25 @@ p {
         display: none;
     }
 }
+
 .skill-box-heading {
     margin: 0;
     font-weight: normal;
     padding-top: 1.2rem;
+    padding-right: 4rem;
+    line-height: 1.5;
     background-repeat: no-repeat;
     background-position: bottom right;
+    background-size: 3rem;
+}
+
+@media (min-width: 600px) {
+    .skill-box-heading {
+        background-position: center top;
+        padding-top: 3.7rem;
+        text-align: center;
+        padding-right: 0;
+    }
 }
 
 .heading-html {
