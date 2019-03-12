@@ -253,23 +253,19 @@ p {
     background-image: url(images/js-logo.svg);
 }
 
-
-
-
 .photo-languages {
     padding: 0 2rem;
     background-color: hsla(0, 0%, 100%);
-
 }
 
-@media (min-width: 600px) {  
+@media (min-width: 600px) {
     .photo-languages {
-    background-image: linear-gradient(45deg, hsl(0, 100%, 71%), 240px, transparent 240px);
-    background-repeat: no-repeat;
+        background-image: linear-gradient(45deg, hsl(0, 100%, 71%), 240px, transparent 240px);
+        background-repeat: no-repeat;
     }
 }
 
-@media (min-width: 800px) {  
+@media (min-width: 800px) {
     .photo-languages {
         background-image: linear-gradient(45deg, hsl(0, 100%, 71%), 330px, transparent 330px);
         background-repeat: no-repeat;
@@ -286,7 +282,6 @@ p {
 
 .photo-language-text {
     padding: 0 1rem;
-    
 }
 
 @media (min-width: 600px) {
@@ -299,13 +294,13 @@ p {
 
 @media (min-width: 900px) {
     .language-text {
-        padding: 10% 0 10% 4rem; 
+        padding: 10% 0 10% 4rem;
     }
 }
 
 @media (min-width: 1280px) {
     .language-text {
-        margin-left:  15%;     
+        margin-left: 15%;
     }
 }
 
@@ -319,19 +314,34 @@ p {
         margin: 2rem auto;
         float: left;
         max-width: 45%;
-        
     }
 }
 
 @media (min-width: 900px) {
     .picture {
         margin: 4rem auto;
-        
-        
     }
 }
 .picture-image {
     max-width: 100%;
     height: auto;
     max-height: 415px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(images/triangles-reduced.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: hsl(231, 10%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.projects p {
+    color: hsl(0, 100%, 71%);
+}
+
+.projects a {
+    color: hsl(0, 0%, 100%);
 }
